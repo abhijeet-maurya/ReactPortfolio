@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-primary: #00d2ff;
+  --color-primary-dark: #003594;
+  --color-secondary: #ffffff;
+  --color-secondary-dim: #c0c0c0;
+  /* Increased contrast */
+  --color-accent: #00f2fe;
+
+  --background-image-accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  --background-image-hero-gradient: linear-gradient(to bottom, #0a0a0a 0%, #000000 100%);
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-accent {
+  background-color: rgba(0, 210, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+/* Text Gradients */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-accent));
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 5rem 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 5rem 3rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 5rem 6rem !important;
+  }
+}
+
+/* Reveal Animation Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
