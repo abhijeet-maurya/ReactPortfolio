@@ -110,7 +110,7 @@ const About = () => {
           >
             <div className="aspect-square rounded-3xl overflow-hidden glass p-2">
               <img 
-                src="/aboutImg.png" 
+                src={`${import.meta.env.BASE_URL}aboutImg.png`} 
                 alt="About Me" 
                 className="w-full h-full rounded-2xl object-cover"
               />
